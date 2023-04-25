@@ -1,15 +1,16 @@
 const productos=[
-    {nombre: "Queso untable", precio: 50},
-    {nombre: "Cerveza", precio: 100},
-    {nombre: "Leche", precio: 150},
-    {nombre: "Deshodorante", precio: 200},
-    {nombre: "Coca-Cola", precio: 250},
-    {nombre: "Carne", precio: 300},
+    {id: 1, nombre: "Queso untable", precio: 650},
+    {id: 2, nombre: "Cerveza pack x6", precio: 2000},
+    {id: 3, nombre: "Leche", precio: 400},
+    {id: 4, nombre: "Deshodorante", precio: 600},
+    {id: 6, nombre: "Coca-Cola 2.25", precio: 650},
+    {id: 7, nombre: "Carne x Kg", precio: 1500},
+    {id: 8, nombre: "Fideos", precio: 700},
 ]
 
 let carritoCompras=[]
 
-let seleccion = prompt("hola desea realizar una compra:")
+let seleccion = prompt("Bienvenidos!!, desea realizar una compra?")
 
 while(seleccion != "si" && seleccion != "no"){
     alert("Por Favor ingresa una respuesta correcta: si o no")
@@ -18,38 +19,41 @@ while(seleccion != "si" && seleccion != "no"){
 
 
 if (seleccion == "si"){
-    alert("Redireccionando al catalogo de productos. ");
-    let catalogo = productos.map((productos)=> '\n'+ productos.nombre +" "+ "$"+ productos.precio + '\n');
-    alert("Catalogo"+"\n"+ catalogo.join(""))
+    alert("Redireccionando al catalogo de productos:");
+    let catalogo = productos.map((productos)=> '\n'+productos.id + ")." + productos.nombre +" "+ "$"+ productos.precio + '\n');
+    alert("Catalogo: "+"\n"+ catalogo.join(""))
 
     while(seleccion != "no"){
         let producto = prompt("Agregar un producto al carrito"+ "\n")
         let precio = 0
-    
-        if (producto =="Queso untable"||producto =="Cerveza"||producto =="Leche"||producto =="Deshodorante"||producto =="Coca-Cola"||producto =="Carne" ){
+
+        if (producto == "Queso untable"||producto == "Cerveza "||producto == "Leche"||producto =="Deshodorante"||producto =="Coca-Cola"||producto == "Carne"||producto == "Fideos"){
             switch(producto){
                 case "Queso untable":
-                    precio =50;
+                    precio =650;
                     break;
-                case "Cerveza":
-                    precio =100;
+                case "Cerveza ":
+                    precio =2000;
                     break;
                 case "Leche":
-                    precio =150;
+                    precio =400;
                     break;
                 case "Deshodorante":
-                    precio =200;
+                    precio =600;
                     break;
                 case "Coca-Cola":
-                    precio =250;
+                    precio =650;
                     break;
                 case "Carne" :
-                    precio =300;
+                    precio =1500;
+                    break;
+                case "Fideos" :
+                    precio =700;
                     break;
                 default:
                     break;
             }
-        let unidades = Number(prompt("Seleccione el nùmero de unidades:"))
+        let unidades = Number(prompt("seleccione el nùmero de unidades:"))
         carritoCompras.push({producto,unidades,precio})
         console.log(carritoCompras)
         }else{
