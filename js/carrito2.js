@@ -8,6 +8,7 @@ const productos=[
     {id: 8, nombre: "Fideos", precio: 700},
 ]
 
+
 let carritoCompras=[]
 
 let seleccion = prompt("Bienvenidos!!, desea realizar una compra?")
@@ -27,12 +28,12 @@ if (seleccion == "si"){
         let producto = prompt("Agregar un producto al carrito"+ "\n")
         let precio = 0
 
-        if (producto == "Queso untable"||producto == "Cerveza "||producto == "Leche"||producto =="Deshodorante"||producto =="Coca-Cola"||producto == "Carne"||producto == "Fideos"){
+        if (producto == "Queso untable"||producto == "Cerveza"||producto == "Leche"||producto =="Deshodorante"||producto =="Coca-Cola"||producto == "Carne"||producto == "Fideos"){
             switch(producto){
                 case "Queso untable":
                     precio =650;
                     break;
-                case "Cerveza ":
+                case "Cerveza":
                     precio =2000;
                     break;
                 case "Leche":
@@ -103,9 +104,6 @@ envio()
 }else if (seleccion == "no"){
     alert("Gracias por su visita")
 }
-
-
-
 
 
 
