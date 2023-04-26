@@ -65,7 +65,10 @@ function mostrarProductos(){
         }else {
             alert("Por Favor ingresa una respuesta correcta: si o no")
             continuar_agregando = prompt("Desea continuar añadiendo productos al carrito?")
-            mostrarProductos()
+            envio()
+            totalFinal()
+
+            
         }
 } 
 
