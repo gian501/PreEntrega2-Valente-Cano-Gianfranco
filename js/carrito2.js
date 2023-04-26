@@ -91,11 +91,14 @@ function totalFinal (){
 function envio(){
     let TOTAL= carritoCompras.reduce ((acc, el) => acc + el.precio * el.cantidad, 0)
     if (TOTAL <= 0 ) {
-        alert("Usted no sumo nada al carrito. Por lo cual no hay gastos de envio")
+        alert("Usted no sumo nada al carrito. Por lo cual no hay gastos de envio");
+        console.log("Usted no sumo nada al carrito. Por lo cual no hay gastos de envio")
     }else if (TOTAL > 5000){
         alert("Al ser tu compra mayor a $5.000. El envio es GRATIS!!. ")
+        console.log("Al ser tu compra mayor a $5.000. El envio es GRATIS!!. ")
     }else {
         alert("Tu compra es inferior a $5.000. Por lo tanto, se te cobrara un recargo de $500 en la entrega. ")
+        console.log("Tu compra es inferior a $5.000. Por lo tanto, se te cobrara un recargo de $500 en la entrega. ")
     }
 }
 
