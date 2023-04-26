@@ -25,41 +25,15 @@ if (seleccion == "si"){
     alert("Catalogo: "+"\n"+ catalogo.join(""))
 
     while(seleccion != "no"){
-        let producto = prompt("Agregar un producto al carrito"+ "\n")
+        let producto = prompt("Ingrese el producto que quiere comprar: "+ "\n");
+        console.log(productos.find((produc) => produc.nombre === producto ));
         let precio = 0
+      
 
-        if (producto == "Queso untable"||producto == "Cerveza"||producto == "Leche"||producto =="Deshodorante"||producto =="Coca-Cola"||producto == "Carne"||producto == "Fideos"){
-            switch(producto){
-                case "Queso untable":
-                    precio =650;
-                    break;
-                case "Cerveza":
-                    precio =2000;
-                    break;
-                case "Leche":
-                    precio =400;
-                    break;
-                case "Deshodorante":
-                    precio =600;
-                    break;
-                case "Coca-Cola":
-                    precio =650;
-                    break;
-                case "Carne" :
-                    precio =1500;
-                    break;
-                case "Fideos" :
-                    precio =700;
-                    break;
-                default:
-                    break;
-            }
-        let unidades = Number(prompt("seleccione el nùmero de unidades:"))
-        carritoCompras.push({producto,unidades,precio})
-        console.log(carritoCompras)
-        }else{
-            alert("Ese producto no se encuentra en nuestro catalogo")
-        }
+            let unidades = Number(prompt("seleccione el nùmero de unidades:"))
+            carritoCompras.push({producto,unidades,precio})
+            console.log(carritoCompras)
+       
 
     seleccion= prompt("Desea continuar añadiendo productos al carrito?")
 
