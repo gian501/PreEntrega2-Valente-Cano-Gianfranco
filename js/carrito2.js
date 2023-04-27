@@ -55,7 +55,7 @@ function mostrarProductos(){
 
         while(continuar_agregando != "si" && continuar_agregando != "no"){
             alert("Por Favor ingresa una respuesta correcta: si o no")
-            continuar_agregando = prompt("hola desea realizar una compra:")
+            continuar_agregando = prompt("Desea continuar añadiendo productos al carrito?")
         }
 
         if (continuar_agregando === "si"){
